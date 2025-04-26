@@ -1,62 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Co-Doctor | Home</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors Availability | SASTRA University</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="logo.jpg" alt="SASTRA Logo" class="logo">
+            <span class="brand-name">SASTRA University</span>
+        </div>
+        <ul class="navbar-center">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Infrastructure</a></li>
+            <li><a href="#">Useful-Links</a></li>
+            <li><a href="#">Parents Corner</a></li>
+            <li><a href="#">Student Activities</a></li>
+        </ul>
+        <div class="navbar-right">
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </nav>
 
-<nav class="navbar">
-    <div class="navbar-left">
-        <img src="logo.png" alt="Co-Doctor Logo" class="logo">
-        <span class="brand-name">Co-Doctor</span>
-    </div>
-    <ul class="navbar-center">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-    <div class="navbar-right">
-        <a href="login.html" class="login-btn">Login</a>
-    </div>
-</nav>
+    <!-- Doctor Credentials -->
+    <div id="doctor-credentials" style="text-align:center; font-weight:bold; margin-top:20px;"></div>
 
-<section class="main-section">
-  <h1>Doctors Availability</h1>
-  <table class="doctors-table">
-    <thead>
-      <tr>
-        <th>Batch</th>
-        <th>Doctor Name</th>
-        <th>Phone Number</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Batch 1</td>
-        <td>Dr. John Smith</td>
-        <td>123-456-7890</td>
-      </tr>
-      <tr>
-        <td>Batch 1</td>
-        <td>Dr. Emily Johnson</td>
-        <td>987-654-3210</td>
-      </tr>
-      <tr>
-        <td>Batch 2</td>
-        <td>Dr. Michael Lee</td>
-        <td>555-666-7777</td>
-      </tr>
-      <tr>
-        <td>Batch 2</td>
-        <td>Dr. Sarah Brown</td>
-        <td>111-222-3333</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+    <!-- Main Section -->
+    <section class="main-section">
+        <h1>Doctors Availability</h1>
+        <table class="doctors-table">
+            <thead>
+                <tr>
+                    <th>Batch</th>
+                    <th>Doctor Name</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Batch 1</td>
+                    <td>Dr. John Smith</td>
+                    <td>123-456-7890</td>
+                </tr>
+                <tr>
+                    <td>Batch 1</td>
+                    <td>Dr. Emily Johnson</td>
+                    <td>987-654-3210</td>
+                </tr>
+                <tr>
+                    <td>Batch 2</td>
+                    <td>Dr. Michael Lee</td>
+                    <td>555-666-7777</td>
+                </tr>
+                <tr>
+                    <td>Batch 2</td>
+                    <td>Dr. Sarah Brown</td>
+                    <td>111-222-3333</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
+    <!-- Script to show doctor credentials -->
+    <script>
+        // Show logged-in doctor's credentials if available
+        window.onload = function() {
+            const loggedIn = localStorage.getItem('loggedIn');
+            const name = localStorage.getItem('name');
+            const batch = localStorage.getItem('batch');
+            if (loggedIn && name && batch) {
+                document.getElementById('doctor-credentials').innerText =
+                    `Logged in as: Dr. ${name} (Batch: ${batch})`;
+            } else {
+                document.getElementById('doctor-credentials').innerText = '';
+            }
+        };
+    </script>
 </body>
 </html>
