@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Co-Doctor | Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Co-Doctor | Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-logo">Co-Doctor</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <a href="login.html" class="btn login-btn">Doctor Login</a>
-    </nav>
 
-    <section class="hero">
-        <h1>Available Doctors</h1>
-        <table class="doctor-table">
-            <thead>
-                <tr>
-                    <th>Batch</th>
-                    <th>Doctor Name</th>
-                    <th>Phone Number</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Batch 1</td>
-                    <td>Dr. John Smith</td>
-                    <td>123-456-7890</td>
-                </tr>
-                <tr>
-                    <td>Batch 1</td>
-                    <td>Dr. Emily Johnson</td>
-                    <td>987-654-3210</td>
-                </tr>
-                <tr>
-                    <td>Batch 2</td>
-                    <td>Dr. Michael Lee</td>
-                    <td>555-666-7777</td>
-                </tr>
-                <tr>
-                    <td>Batch 2</td>
-                    <td>Dr. Sarah Brown</td>
-                    <td>111-222-3333</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+<nav class="navbar">
+    <div class="navbar-left">
+        <img src="logo.png" alt="Co-Doctor Logo" class="logo">
+        <span class="brand-name">Co-Doctor</span>
+    </div>
+    <ul class="navbar-center">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="navbar-right">
+        <a href="login.html" class="login-btn">Login</a>
+    </div>
+</nav>
+
+<section class="main-section">
+  <h1>Doctors Availability</h1>
+  <table class="doctors-table">
+    <thead>
+      <tr>
+        <th>Batch</th>
+        <th>Doctor Name</th>
+        <th>Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Batch 1</td>
+        <td>Dr. John Smith</td>
+        <td>123-456-7890</td>
+      </tr>
+      <tr>
+        <td>Batch 1</td>
+        <td>Dr. Emily Johnson</td>
+        <td>987-654-3210</td>
+      </tr>
+      <tr>
+        <td>Batch 2</td>
+        <td>Dr. Michael Lee</td>
+        <td>555-666-7777</td>
+      </tr>
+      <tr>
+        <td>Batch 2</td>
+        <td>Dr. Sarah Brown</td>
+        <td>111-222-3333</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 </body>
 </html>
