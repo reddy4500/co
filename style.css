@@ -94,3 +94,33 @@ body {
 .doctors-table tr:nth-child(even) {
   background: #f2f2f2;
 }
+
+/* Login Status Styles */
+.login-status {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logged-in-message {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  padding: 10px 20px;
+  margin: 20px auto;
+  width: fit-content;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #a71d2a;
+}

@@ -45,4 +45,3 @@ function loadHome() {
 if (document.getElementById('doctor-credentials')) {
     loadHome();
 }
-
