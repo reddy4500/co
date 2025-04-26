@@ -23,8 +23,6 @@
     </div>
 </nav>
 
-<div id="login-status" class="login-status"></div>
-
 <section class="main-section">
   <h1>Doctors Availability</h1>
   <table class="doctors-table">
@@ -59,22 +57,6 @@
     </tbody>
   </table>
 </section>
-
-<script src="script.js"></script>
-<script>
-    const loginStatus = document.getElementById('login-status');
-    const doctorName = localStorage.getItem('doctorName');
-    const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
-
-    if (isLoggedIn && doctorName) {
-        loginStatus.innerHTML = `
-            <div class="logged-in-message">
-                ✅ Doctor <strong>${doctorName}</strong> is logged in 
-                <button onclick="logout()" class="logout-btn">Logout</button>
-            </div>
-        `;
-    }
-</script>
 
 </body>
 </html>
